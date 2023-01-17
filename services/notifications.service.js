@@ -12,11 +12,15 @@ const notificationService = {
       to: `whatsapp:${process.env.ADMIN_PHONE}`,
     });
   },
-  notifyByEmailCompra: (asunto, listaProductos, usuarioComprador) => {},
+  notifyByEmailCompra: (asunto, listaProductos, usuarioComprador) => {
+    
+
+
+  },
   notifyByEmailUser: async (nuevoUsuario) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-      to: process.env.ADMIN_EMAIL, // Change to your recipient
+      to: 'andres.fernandezcaballero@davinci.edu.ar', // Change to your recipient
       from: process.env.ADMIN_EMAIL, // Change to your verified sender
       subject: "Nuevo usuario",
       text: `Nuevo usuario registrado ${nuevoUsuario.username} ${nuevoUsuario.email}`,
@@ -24,8 +28,8 @@ const notificationService = {
     };
     await sgMail
       .send(msg)
-      .then((response) => console.log("EMAIL BIEN ENVIADO"))
-      .catch((error) => console.log(error.message));
+      .then((response) => console.log("EMAIL BIEN ENVIADO" + response))
+      .catch((error) => console.log(error));
   },
 };
 module.exports = notificationService;

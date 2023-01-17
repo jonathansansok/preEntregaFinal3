@@ -49,7 +49,7 @@ const userController = {
         thumbnail: req.file ? req.file.filename: "default.png", 
       
       });
-      await notificationService.notifyByEmailUser(user);
+      notificationService.notifyByEmailUser(user);
       await notificationService.notifyByWhatsApp(user);
       res.redirect("/");
     } catch (error) {

@@ -77,7 +77,7 @@ app.use(passport.session());
 app.use(userRoutes);
 app.use("/api", apiRoutes);
 app.use("/products", productRoutes);
-//app.use("/cart", cartRoutes);
+app.use("/cart", cartRoutes);
 // Cuando no existe la ruta
 app.get("/*", (req, res) => {
   logger_warn.error(
@@ -89,7 +89,10 @@ app.get("/*", (req, res) => {
 });
 
 ////////////////////////////////////////////////////////////
-
+app.listen(PORT, () =>
+    console.log(`Server up on port ${PORT}, process id=${process.pid}`)
+  );
+/* 
 if (cluster.isPrimary) {
   if (modo !== "fork") {
     for (let i = 0; i < core.cpus().length; i++) {
@@ -114,3 +117,4 @@ if (cluster.isPrimary) {
     console.log(`Server up on port ${PORT}, process id=${process.pid}`)
   );
 }
+ */

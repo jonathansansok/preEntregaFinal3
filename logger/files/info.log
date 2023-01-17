@@ -360,3 +360,16 @@
 [2023-01-17T03:33:29.826] [INFO] INFO - Ruta POST - "localhost:8080" accedida
 [2023-01-17T03:33:32.212] [INFO] INFO - Ruta GET - "localhost:8080" accedida
 [2023-01-17T03:33:38.596] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T14:18:23.131] [INFO] INFO - Ruta POST - "localhost:8080" accedida
+[2023-01-17T14:18:26.113] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T14:20:18.828] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T14:20:31.235] [INFO] INFO - Ruta POST - "localhost:8080" accedida
+[2023-01-17T14:20:33.625] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T14:21:49.996] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T14:22:08.502] [INFO] INFO - Ruta POST - "localhost:8080" accedida
+[2023-01-17T14:22:10.369] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T14:23:34.596] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T14:23:40.255] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T14:23:47.959] [INFO] INFO - Ruta POST - "localhost:8080" accedida
+[2023-01-17T14:23:49.644] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T15:01:13.341] [INFO] INFO - Ruta GET - "localhost:8080" accedida
