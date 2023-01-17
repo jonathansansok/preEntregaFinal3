@@ -1,4 +1,5 @@
 const sgMail = require("@sendgrid/mail");
+const { response } = require("express");
 const accountSid = process.env.TWILIO_SID;
 const authToken = process.env.TWILIO_TOKEN;
 const client = require("twilio")(accountSid, authToken);
@@ -7,7 +8,7 @@ const notificationService = {
   notifyByWhatsApp: async (nuevoUsuario) => {
     await client.messages
       .create({
-        body: `Nuevo usuario registrado ${nuevoUsuario.username} ${nuevoUsuario.email}`,
+        body: `Tienes un nuevo usuario registrado ${nuevoUsuario.username} ${nuevoUsuario.email}`,
         from: "whatsapp:+14155238886",
         to: `whatsapp:${process.env.ADMIN_PHONE}`,
       })
@@ -20,10 +21,13 @@ const notificationService = {
       from: process.env.ADMIN_EMAIL, // Change to your verified sender
       subject: "Nuevo usuario",
       text: `Nuevo usuario registrado ${nuevoUsuario.username} ${nuevoUsuario.email}`,
-      //html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
     };
     await sgMail  
       .send(msg)
+      .then(response => console.log('email has been seent'))
+      .catch(error => console.log(error.message)) 
+
   },
 };
 module.exports = notificationService;
