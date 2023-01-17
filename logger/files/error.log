@@ -1,0 +1,9 @@
+[2023-01-15T17:43:27.886] [ERROR] ERROR - Ruta GET - "localhost:8080/products" error: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Product"
+[2023-01-15T17:45:59.682] [ERROR] ERROR - Ruta GET - "localhost:8080/products" error: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Product"
+[2023-01-15T17:57:41.963] [ERROR] ERROR - Ruta GET - "localhost:8080/products" error: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Product"
+[2023-01-15T17:59:20.699] [ERROR] ERROR - Ruta GET - "localhost:8080/products" error: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Product"
+[2023-01-15T18:01:11.357] [ERROR] ERROR - Ruta GET - "localhost:8080/products" error: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Product"
+[2023-01-15T18:01:47.657] [ERROR] ERROR - Ruta GET - "localhost:8080/products" error: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Product"
+[2023-01-15T18:03:02.717] [ERROR] ERROR - Ruta GET - "localhost:8080/products" error: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Product"
+[2023-01-15T18:13:18.745] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Product validation failed: thumbnail: Path `thumbnail` is required.
+[2023-01-15T18:17:24.322] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Product validation failed: thumbnail: Path `thumbnail` is required.

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <title>CART</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="w-full h-screen bg-gradient-to-b from-black to-gray-700">
+    <div class="max-w-[1240px] mx-auto px-4">
+      <nav class="h-[80px] w-full flex items-center justify-between text-white">
+        <a href="/"> <h1 class="text-xl font-bold">Checkout Final</h1> </a>
+<!--         <ul
+          class="flex items-center gap-x-5 font-semibold text-lg text-gray-400"
+        >
+          <li
+            class="capitalize hover:text-white hover:scale-105 duration-300 cursor-pointer"
+          >
+            <a href="/register">Terminar</a>
+          </li>
+        </ul> -->
+      </nav>
+      <section class="py-4 w-full">
+        <div class="w-[650px] mx-auto text-center">
+          <h3 class="text-3xl text-white font-semibold italic">Lista final</h3>
+          <main>
+            <% if (cartFinal) { %> <% cartFinal.forEach(i=>{ %>
+            <div class="card" style="width: 18rem; margin: 10px">
+              <img
+                src="<%=i.thumbnail%>"
+                class="card-img-top"
+                alt="<%=i.title%>"
+              />
+              <div class="card-body">
+                <h5 class="card-title"><%=i.title%></h5>
+                <p class="card-text">$ <%=i.price%></p>
+                <a href="/api/products/<%=i.id%>" class="btn btn-primary">
+                  Ver producto</a
+                >
+              </div>
+            </div>
+            <% }); %> <% } else { %>
+            <h1>No hay nada seleccionado</h1>
+            <% } %>
+            <a href="/mandarMaildeComprafinalizada" class="btn btn-primary">
+              Comprar y enviarme datos de seguimiento</a
+            >
+          </main>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

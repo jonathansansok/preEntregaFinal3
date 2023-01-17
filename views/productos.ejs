@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html" />
+    <title>Productos</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="w-full h-screen bg-gradient-to-b from-black to-gray-700">
+    <div class="max-w-[1240px] mx-auto px-4">
+      <nav class="h-[80px] w-full flex items-center justify-between text-white">
+        <a href="/">
+          <h1 class="text-xl font-bold">Productos disponibles</h1>
+        </a>
+
+        <ul
+          class="flex items-center gap-x-5 font-semibold text-lg text-gray-400"
+        >
+          <li
+            class="capitalize hover:text-white hover:scale-105 duration-300 cursor-pointer"
+          >
+            <a href="/register">register</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <nav>
+          <a href="/">Dashboard</a> <br />
+          <a href="/products/create">Agregar productos al catalogo</a> <br />
+        </nav>
+
+        <section class="py-4 w-full">
+          <div class="w-[650px] mx-auto text-center">
+            <h3 class="text-3xl text-white font-semibold italic">
+              Elige tus productos
+            </h3>
+            <main>
+              <% if(products.length > 0) { %> <% products.forEach(product => {
+              %>
+              <div class="flex flex-col items-center justify-center">
+                <img
+                  width="200"
+                  height="200"
+                  class="max-w-full h-auto rounded-full"
+                  src="/assets/images/<%= product.thumbnail %>"
+                  alt="user-avatar"
+                />
+                <h3 class="text-2xl text-white font-semibold italic">
+                  <%= product.title %>
+                </h3>
+                <p class="text-2xl text-white font-semibold italic">
+                  <%= product.price %>
+                </p>
+                <a href="/products/<%= product.id %>">Ver detalle</a>
+              </div>
+              <% }) %> <% } else { %>
+              <h3 class="text-2xl text-white font-semibold italic">
+                No hay productos disponibles
+              </h3>
+              <% } %>
+            </main>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
