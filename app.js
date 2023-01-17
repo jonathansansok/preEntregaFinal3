@@ -89,10 +89,7 @@ app.get("/*", (req, res) => {
 });
 
 ////////////////////////////////////////////////////////////
-app.listen(PORT, () =>
-    console.log(`Server up on port ${PORT}, process id=${process.pid}`)
-  );
-/* 
+
 if (cluster.isPrimary) {
   if (modo !== "fork") {
     for (let i = 0; i < core.cpus().length; i++) {
@@ -117,4 +114,3 @@ if (cluster.isPrimary) {
     console.log(`Server up on port ${PORT}, process id=${process.pid}`)
   );
 }
- */
