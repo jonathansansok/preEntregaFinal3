@@ -306,3 +306,10 @@
 [2023-01-16T23:17:17.376] [INFO] INFO - Ruta GET - "localhost:8080" accedida
 [2023-01-16T23:17:32.832] [INFO] INFO - Ruta POST - "localhost:8080" accedida
 [2023-01-16T23:17:33.978] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T00:28:31.138] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T00:28:40.313] [INFO] INFO - Ruta POST - "localhost:8080" accedida
+[2023-01-17T00:28:41.552] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T00:39:34.463] [INFO] INFO - Ruta POST - "localhost:8080" accedida
+[2023-01-17T00:39:35.676] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-01-17T00:49:12.160] [INFO] INFO - Ruta POST - "localhost:8080" accedida
+[2023-01-17T00:49:14.555] [INFO] INFO - Ruta GET - "localhost:8080" accedida
