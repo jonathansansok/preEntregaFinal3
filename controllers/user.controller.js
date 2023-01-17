@@ -63,9 +63,7 @@ const userController = {
             if (err) console.log(err);
           }
         );
-      
       }
-
       res.redirect("/register?error=true&msg=Error en el registro");
     }
   },
