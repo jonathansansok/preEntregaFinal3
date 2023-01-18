@@ -8,11 +8,11 @@ RUTAS DE LA APLICACION
 
 rutas con vista html
 
-GET: /loguin --> formulario de loguin
+GET: /login --> formulario de login
 
 GET: /register --> formulario de registro
 
-POST: /loguin --> realiza el proceso de loguin
+POST: /login --> realiza el proceso de login
 
 POST: /register --> da de alta un nuevo usuario
 
