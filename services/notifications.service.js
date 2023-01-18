@@ -13,15 +13,15 @@ const notificationService = {
       to: `whatsapp:${ADMIN_PHONE}`,
     });
   },
-  notifyByEmailCompra: (asunto, listaProductos, usuarioComprador) => {
-    /* const msg = {
+  notifyByEmailCompra: async (asunto, listaProductos, usuarioComprador) => {
+    const msg = {
       to: ADMIN_EMAIL, // Change to your recipient
       from: ADMIN_EMAIL, // Change to your verified sender
       subject: "Nueva compra",
-      html: `Nueva compra de ${asunto.username} ${usuarioComprador.email} ${listaProductos.email}`,
+      html: `Nueva compra de ${asunto} ${usuarioComprador} ${listaProductos}`,
     };
     await sendGrid.send(msg);
-    console.info("Comprobante de compra enviado por whats app"); */
+    console.info("Comprobante de compra enviado por whats app");
   },
   notifyByEmailUser: async (nuevoUsuario) => {
     const msg = {

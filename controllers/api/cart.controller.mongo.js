@@ -19,6 +19,7 @@ const CartController = {
     const id = req.params.id;
     const cart = await obtenerCarritoPorIdUsuarioOCrearlo(id);
     res.status(200).json({ message: "carrito actual", cart: cart });
+    await notificationService.notifyByEmailCompra(cart);
   },
 
   addToCart: async (req, res) => {
