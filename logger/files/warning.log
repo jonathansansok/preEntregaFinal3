@@ -224,3 +224,5 @@
 [2023-01-18T17:37:05.784] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
 [2023-01-18T17:38:15.394] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
 [2023-01-18T17:42:18.690] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
+[2023-01-18T18:19:38.316] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
+[2023-01-18T18:19:45.762] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
