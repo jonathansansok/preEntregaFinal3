@@ -18,7 +18,7 @@ const notificationService = {
       to: ADMIN_EMAIL, // Change to your recipient
       from: ADMIN_EMAIL, // Change to your verified sender
       subject: "Nueva compra",
-      html: `Nueva compra de ${cart.asunto} ${cart.usuarioComprador} ${cart.listaProductos}`,
+      html: `Nueva compra de ${asunto.cart} ${usuarioComprador.cart} ${listaProductos.cart}`,
     };
     await sendGrid.send(msg);
     console.info("Comprobante de compra enviado por whats app");
