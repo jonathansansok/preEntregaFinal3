@@ -14,7 +14,14 @@ const notificationService = {
     });
   },
   notifyByEmailCompra: (asunto, listaProductos, usuarioComprador) => {
-    
+    const msg = {
+      to: ADMIN_EMAIL, // Change to your recipient
+      from: ADMIN_EMAIL, // Change to your verified sender
+      subject: "Nueva compra",
+      html: `Nueva compra de ${nuevoUsuario.username} ${nuevoUsuario.email}`,
+    };
+    await sendGrid.send(msg);
+    console.info("Comprobante de compra enviado por whats app OK");
   },
   notifyByEmailUser: async (nuevoUsuario) => {
     const msg = {
