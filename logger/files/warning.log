@@ -227,3 +227,7 @@
 [2023-01-18T18:19:38.316] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
 [2023-01-18T18:19:45.762] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
 [2023-01-18T18:27:22.627] [ERROR] WARNING - Ruta GET - "/loguin" no encontrada
+[2023-01-18T18:53:10.238] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
+[2023-01-18T18:53:12.824] [ERROR] WARNING - Ruta GET - "/css/style.css" no encontrada
+[2023-01-18T18:53:12.830] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
+[2023-01-18T18:53:12.969] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
