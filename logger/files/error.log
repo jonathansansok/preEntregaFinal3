@@ -7,3 +7,4 @@
 [2023-01-15T18:03:02.717] [ERROR] ERROR - Ruta GET - "localhost:8080/products" error: Cast to ObjectId failed for value "create" (type string) at path "_id" for model "Product"
 [2023-01-15T18:13:18.745] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Product validation failed: thumbnail: Path `thumbnail` is required.
 [2023-01-15T18:17:24.322] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Product validation failed: thumbnail: Path `thumbnail` is required.
+[2023-01-18T17:42:38.703] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot destructure property 'filename' of 'req.file' as it is undefined.

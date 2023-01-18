@@ -4,7 +4,6 @@ const bcrypt = require("bcryptjs");
 const fs = require("fs");
 const path = require("path");
 const notificationService = require("../services/notifications.service");
-const { default: file } = require("@babel/core/lib/transformation/file/file");
 
 const userController = {
   dashboard: (req, res) => {
@@ -46,8 +45,7 @@ const userController = {
         username,
         email,
         password: hashPassword,
-        thumbnail: req.file ? req.file.filename: "default.png", 
-      
+        thumbnail: req.file ? req.file.filename : "default.png",
       });
       notificationService.notifyByEmailUser(user);
       await notificationService.notifyByWhatsApp(user);
@@ -55,7 +53,7 @@ const userController = {
     } catch (error) {
       console.log(error);
       // remove file from server
-      if (file && file.filename){
+      if (file && file.filename) {
         fs.unlink(
           // elimina el archivo de imagen si surge un problema en el registro
           path.join(__dirname, "../", "assets", "images", req.file.filename),

@@ -2,11 +2,10 @@ const mongoose = require("mongoose");
 
 const cartSchema = mongoose.Schema(
   {
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
-    products: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+    products: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "Product", default: [] },
+    ],
     subTotal: { type: Number, default: 0 },
   },
   { timestamps: true }

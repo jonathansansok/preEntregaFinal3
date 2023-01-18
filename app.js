@@ -18,7 +18,7 @@ const { logger_warn } = require("./logger/log_config");
 const userRoutes = require("./routes/user.routes");
 const apiRoutes = require("./routes/api/api.routes");
 const productRoutes = require("./routes/product.routes");
-const cartRoutes = require("./routes/cart.routes");
+const cartRoutes = require("./routes/api/cart.routes");
 ////////////////////////////////////////////////
 
 ///////////// YARGS //////////////
@@ -77,7 +77,7 @@ app.use(passport.session());
 app.use(userRoutes);
 app.use("/api", apiRoutes);
 app.use("/products", productRoutes);
-app.use("/cart", cartRoutes);
+// app.use("/cart", cartRoutes);
 // Cuando no existe la ruta
 app.get("/*", (req, res) => {
   logger_warn.error(

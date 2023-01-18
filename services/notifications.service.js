@@ -1,35 +1,30 @@
-const sgMail = require("@sendgrid/mail");
-const { response } = require("express");
-const accountSid = process.env.TWILIO_SID;
-const authToken = process.env.TWILIO_TOKEN;
-const client = require("twilio")(accountSid, authToken);
-console.log(accountSid);
+const { TWILIO_SID, TWILIO_TOKEN, SENDGRID_API_KEY, ADMIN_PHONE, ADMIN_EMAIL } =
+  process.env;
+
+const twilio = require("twilio")(TWILIO_SID, TWILIO_TOKEN);
+const sendGrid = require("@sendgrid/mail");
+sendGrid.setApiKey(SENDGRID_API_KEY);
+
 const notificationService = {
   notifyByWhatsApp: async (nuevoUsuario) => {
-    await client.messages.create({
+    await twilio.messages.create({
       body: `Tienes un nuevo usuario registrado con el nombre ${nuevoUsuario.username} y su email es ${nuevoUsuario.email}`,
       from: "whatsapp:+14155238886",
-      to: `whatsapp:${process.env.ADMIN_PHONE}`,
+      to: `whatsapp:${ADMIN_PHONE}`,
     });
   },
   notifyByEmailCompra: (asunto, listaProductos, usuarioComprador) => {
     
-
-
   },
   notifyByEmailUser: async (nuevoUsuario) => {
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-      to: process.env.ADMIN_EMAIL, // Change to your recipient
-      from: process.env.ADMIN_EMAIL, // Change to your verified sender
+      to: ADMIN_EMAIL, // Change to your recipient
+      from: ADMIN_EMAIL, // Change to your verified sender
       subject: "Nuevo usuario",
-      text: `Nuevo usuario registrado ${nuevoUsuario.username} ${nuevoUsuario.email}`,
-      html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+      html: `Nuevo usuario registrado ${nuevoUsuario.username} ${nuevoUsuario.email}`,
     };
-    await sgMail
-      .send(msg)
-      .then((response) => console.log("EMAIL BIEN ENVIADO " + response))
-      .catch((error) => console.log(error));
+    await sendGrid.send(msg);
+    console.info("Email enviado correctamente");
   },
 };
 module.exports = notificationService;
