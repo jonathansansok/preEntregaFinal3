@@ -1,6 +1,7 @@
 npm run dev
 
 PATRON
+
 rutas- controller- services - view
 
 RUTAS DE LA APLICACION
@@ -32,6 +33,7 @@ POST: /products/delete/{id_producto} --> elimina un producto
 
 
 rutas API
+
 GET: /api/users --> lista todos los usuarios
 
 GET: /api/cart:{id_usuario} --> lista el carrito de un usuario si no existe lo crea
