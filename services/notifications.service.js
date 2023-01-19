@@ -13,15 +13,19 @@ const notificationService = {
       to: `whatsapp:${ADMIN_PHONE}`,
     });
   },
-  notifyByEmailCompra: async (asunto, listaProductos, usuarioComprador) => {
-    const msg = {
-      to: ADMIN_EMAIL, // Change to your recipient
-      from: ADMIN_EMAIL, // Change to your verified sender
-      subject: "Nueva compra",
-      html: `Nueva compra de ${asunto.cart} ${usuarioComprador.cart} ${listaProductos.cart}`,
-    };
-    await sendGrid.send(msg);
-    console.info("Comprobante de compra enviado por whats app");
+  notifyByWhatsAppCompra: async (asunto, listaProductos, usuarioComprador) => {
+    let texto = '';
+    texto += 'Lista de Compras '  
+    listaProductos.forEach(producto => {
+      texto += ' ' + producto.title + ' '
+    })
+    texto += "pertenenciente a " 
+    texto += usuarioComprador.username
+    await twilio.messages.create({
+      body: texto, 
+      from: "whatsapp:+14155238886",
+      to: `whatsapp:${ADMIN_PHONE}`,
+    });
   },
   notifyByEmailUser: async (nuevoUsuario) => {
     const msg = {

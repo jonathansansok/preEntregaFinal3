@@ -3,8 +3,12 @@ const UserModel = require("./../../models/user.model");
 const CartModel = require("./../../models/cart.model");
 const ProductModel = require("./../../models/product.model");
 
+const notificationService = require("../../services/notifications.service");
+
+
 async function obtenerCarritoPorIdUsuarioOCrearlo(userId) {
   const user = await UserModel.findById(userId);
+
   const cart = await CartModel.find({ user: user }).populate("products");
   if (cart[0]) {
     return cart[0];
@@ -19,7 +23,6 @@ const CartController = {
     const id = req.params.id;
     const cart = await obtenerCarritoPorIdUsuarioOCrearlo(id);
     res.status(200).json({ message: "carrito actual", cart: cart });
-    await notificationService.notifyByEmailCompra(cart);
   },
 
   addToCart: async (req, res) => {
@@ -30,9 +33,16 @@ const CartController = {
       const product = await ProductModel.findById(idProduct);
 
       cart.products.push(product);
-      cart.subTotal += product.price;
+      cart.subTotal += parseInt(product.price);
       await cart.save();
 
+      const user = await UserModel.findById(idUser);
+
+      await notificationService.notifyByWhatsAppCompra(
+        "carritoActualizado",
+        cart.products,
+        user
+      );
       res.status(200).json({ message: "producto agregado", cart: cart });
     } catch (err) {
       console.log("no se pudo agregar al carrito", err);

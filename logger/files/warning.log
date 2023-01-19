@@ -231,3 +231,16 @@
 [2023-01-18T18:53:12.824] [ERROR] WARNING - Ruta GET - "/css/style.css" no encontrada
 [2023-01-18T18:53:12.830] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
 [2023-01-18T18:53:12.969] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
+[2023-01-18T18:54:32.768] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
+[2023-01-18T18:54:36.537] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
+[2023-01-18T21:11:24.838] [ERROR] WARNING - Ruta GET - "/favicon.ico" no encontrada
+[2023-01-18T21:11:29.589] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
+[2023-01-18T21:15:00.103] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
+[2023-01-18T21:17:16.401] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
+[2023-01-18T21:21:11.825] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
+[2023-01-18T21:21:27.950] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
+[2023-01-18T21:26:33.713] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
+[2023-01-18T21:27:40.540] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
+[2023-01-18T21:45:44.220] [ERROR] WARNING - Ruta GET - "/register.js" no encontrada
+[2023-01-18T21:48:00.867] [ERROR] WARNING - Ruta GET - "/productos" no encontrada
+[2023-01-18T21:48:16.180] [ERROR] WARNING - Ruta GET - "/api/products" no encontrada
