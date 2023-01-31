@@ -1,6 +1,6 @@
 const userModel = require("../../models/user.model");
 
-const UsersService = require ("../services/userService.js");
+const UsersService = require ("../../services/userService.js");
 const UserDTO = require ("../dtos/userDTO.js");
 const userService = new UsersService()
 
