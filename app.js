@@ -20,7 +20,8 @@ const apiRoutes = require("./routes/api/api.routes");
 const productRoutes = require("./routes/product.routes");
 const cartRoutes = require("./routes/api/cart.routes");
 ////////////////////////////////////////////////
-
+new MongoClient()
+const MongoClient = require("./src/models/MongoClient.js");
 ///////////// YARGS //////////////
 const yargs = require("yargs");
 yargs.version("1.0.0");
