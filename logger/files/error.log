@@ -8,3 +8,13 @@
 [2023-01-15T18:13:18.745] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Product validation failed: thumbnail: Path `thumbnail` is required.
 [2023-01-15T18:17:24.322] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Product validation failed: thumbnail: Path `thumbnail` is required.
 [2023-01-18T17:42:38.703] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+[2023-02-23T19:48:48.532] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')
+[2023-02-23T19:48:51.065] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')
+[2023-02-23T19:49:15.515] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot destructure property 'filename' of 'req.file' as it is undefined.
+[2023-02-23T19:50:58.639] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')
+[2023-02-27T21:12:36.346] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')
+[2023-02-27T21:19:33.570] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')
+[2023-02-27T21:20:14.806] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')
+[2023-02-27T21:21:42.460] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')
+[2023-02-27T21:21:54.961] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')
+[2023-02-27T21:22:06.528] [ERROR] ERROR - Ruta POST - "localhost:8080/products" error: Cannot read properties of undefined (reading 'filename')

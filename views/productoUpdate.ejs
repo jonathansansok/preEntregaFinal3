@@ -7,14 +7,14 @@
     <title>Editar</title>
   </head>
   <body>
-    <form method="post" action="/products/actualize/<%=product._id %>">
+    <form method="post" action="/products/actualize/<%=product._id %>" enctype="multipart/form-data">
       <label for="title">Titulo</label>
       <input type="text" name="title" id="title" value="<%= product.title %>" />
       <label for="price">Precio</label>
       <input type="text" name="price" id="price" value="<%= product.price %>" />
       <label for="thumbnail">Imagen</label>
       <input
-        type="text"
+        type="file"
         name="thumbnail"
         id="thumbnail"
         value="<%= product.thumbnail %>"

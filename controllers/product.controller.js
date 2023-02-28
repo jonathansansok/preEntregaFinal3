@@ -65,7 +65,11 @@ const productController = {
     );
     try {
       const { id } = req.params;
+      console.log(req.body)
+      console.log(req.file)
+
       const product = await productServices.getProductById(id);
+      console.log(product);
       res.render("productoUpdate", { product });
     } catch (error) {
       logger_error.error(
@@ -106,7 +110,7 @@ const productController = {
       const { id } = req.params;
       const producto = await productServices.deleteProduct(id);
       console.log(`producto ${producto} eliminado`);
-      res.redirect("/productos");
+      res.redirect("/products");
     } catch (error) {
       logger_error.error(
         `Ruta ${req.method} - "${req.hostname}:${req.socket.localPort}${req.baseUrl}" error: ${error.message}`
