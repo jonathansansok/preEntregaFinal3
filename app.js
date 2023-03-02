@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+const ChatController = require("./controllers/chat.controller.mong")
 const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
@@ -19,6 +19,7 @@ const userRoutes = require("./routes/user.routes");
 const apiRoutes = require("./routes/api/api.routes");
 const productRoutes = require("./routes/product.routes");
 const cartRoutes = require("./routes/api/cart.routes");
+
 ////////////////////////////////////////////////
 
 ///////////// YARGS //////////////
@@ -26,7 +27,7 @@ const yargs = require("yargs");
 yargs.version("1.0.0");
 
 let modo = yargs.argv.modo || "fork";
-
+ 
 yargs.parse();
 //////////////////////////////////
 
@@ -76,10 +77,7 @@ app.use(passport.session());
 app.use(userRoutes);
 app.use("/api", apiRoutes);
 app.use("/products", productRoutes);
-app.get("/chat", (req,res) =>{
-    res.render('chat')
-
-} );
+app.get("/chat", ChatController.chat);
 // app.use("/cart", cartRoutes);
 // Cuando no existe la ruta
 app.get("/*", (req, res) => {
@@ -92,8 +90,14 @@ app.get("/*", (req, res) => {
 });
 
 ////////////////////////////////////////////////////////////
-
-if (cluster.isPrimary) {
+mongoose
+  .connect(process.env.mongo_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then((res) => console.log("Base de datos conectada!!"))
+  .catch((err) => console.log("Error al conectar la base de datos!!"));
+/* if (cluster.isPrimary) {
   if (modo !== "fork") {
     for (let i = 0; i < core.cpus().length; i++) {
       cluster.fork();
@@ -105,13 +109,6 @@ if (cluster.isPrimary) {
     cluster.fork();
   }
 } else {
-  mongoose
-    .connect(process.env.mongo_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
-    .then((res) => console.log("Base de datos conectada!!"))
-    .catch((err) => console.log("Error al conectar la base de datos!!"));
 }
-
-module.export = app;
+ */
+module.exports = app;
