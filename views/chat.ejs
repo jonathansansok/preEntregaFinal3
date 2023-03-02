@@ -64,7 +64,7 @@
     <title>Chat App</title>
   </head>
   <body>
-    <h1>MauSapp</h1>
+    <h1>Chat con Admin</h1>
     <ul id="messages"></ul>
     <form action="" id="form">
       <input
@@ -101,7 +101,8 @@
 
         const item = document.createElement("li");
         const etiquetaUsuario = document.createElement("p");
-        etiquetaUsuario.innerHTML = "usuario: " +  msg.userName + " [ Date: " + fecha + " ]";
+        etiquetaUsuario.innerHTML =
+          "usuario: " + msg.userName + " [ Date: " + fecha + " ]";
 
         const etiquetaMensaje = document.createElement("p");
         etiquetaMensaje.innerHTML = "mensaje: " + msg.mensaje;
