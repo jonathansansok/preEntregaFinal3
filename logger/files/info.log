@@ -572,3 +572,6 @@
 [2023-03-01T23:16:44.493] [INFO] INFO - Ruta GET - "localhost:8080" accedida
 [2023-03-01T23:16:46.657] [INFO] INFO - Ruta GET - "localhost:8080" accedida
 [2023-03-01T23:19:11.219] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-03-05T17:56:17.844] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-03-05T17:56:24.550] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-03-05T17:56:36.713] [INFO] INFO - Ruta GET - "localhost:8080/products" accedida

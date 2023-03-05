@@ -1,5 +1,7 @@
 require("dotenv").config();
 const ChatController = require("./controllers/chat.controller.mong")
+const dataView = require("./middlewares/dataView.middleware")
+const chatRoutes = require("./routes/chat.routes");
 const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
@@ -70,14 +72,15 @@ app.use(compression());
 require("./strategies/local");
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(dataView)
 ////////////////////////////////////////////////////////////////////////////////////////////
 //crear RUTAS DEL ECOMMERCE productos y  carritos. Y CREAR LAS VISTAS EN EJS PARA ecommerce y carrito
 //estilos y agregar una pagina cque tenga formulario para agregar productos /crear post.productos
 app.use(userRoutes);
 app.use("/api", apiRoutes);
 app.use("/products", productRoutes);
-app.get("/chat", ChatController.chat);
+app.use("/chat", chatRoutes);
+
 // app.use("/cart", cartRoutes);
 // Cuando no existe la ruta
 app.get("/*", (req, res) => {
