@@ -93,13 +93,7 @@ app.get("/*", (req, res) => {
 });
 
 ////////////////////////////////////////////////////////////
-mongoose
-  .connect(process.env.mongo_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then((res) => console.log("Base de datos conectada!!"))
-  .catch((err) => console.log("Error al conectar la base de datos!!"));
+
 /* if (cluster.isPrimary) {
   if (modo !== "fork") {
     for (let i = 0; i < core.cpus().length; i++) {

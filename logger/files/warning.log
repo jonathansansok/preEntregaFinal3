@@ -398,3 +398,8 @@
 [2023-03-05T17:56:36.763] [ERROR] WARNING - Ruta GET - "/css/style.css" no encontrada
 [2023-03-05T17:56:36.769] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
 [2023-03-05T17:56:36.946] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
+[2023-03-09T14:33:28.618] [ERROR] WARNING - Ruta GET - "/favicon.ico" no encontrada
+[2023-03-09T15:05:32.701] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
+[2023-03-09T15:05:44.632] [ERROR] WARNING - Ruta GET - "/css/style.css" no encontrada
+[2023-03-09T15:05:44.639] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
+[2023-03-09T15:05:44.850] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada

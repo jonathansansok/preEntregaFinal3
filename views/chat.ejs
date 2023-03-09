@@ -74,6 +74,18 @@
         value="<%= username %>"
       />
       <input type="text" autocomplete="off" id="input" />
+      <input
+      type="hidden"
+      name="userId"
+      id="userId"
+      value="<%= userId %>"
+    />
+      <input
+      type="hidden"
+      name="chatId"
+      id="chatId"
+      value="<%= chatId %>"
+    />
       <button>Send</button>
     </form>
 
@@ -81,6 +93,8 @@
     <script>
       const socket = io();
       const userName = document.getElementById("username").value;
+      const userId = document.getElementById("userId").value;
+      const chatId = document.getElementById("chatId").value;
       const form = document.getElementById("form");
       const input = document.getElementById("input");
       const messagesContainer = document.getElementById("messages");
@@ -88,7 +102,7 @@
       form.addEventListener("submit", (event) => {
         event.preventDefault();
         if (input.value) {
-          const mensaje = { userName, mensaje: input.value };
+          const mensaje = { userName, mensaje: input.value, userId  };
           socket.emit("chat message", mensaje);
           input.value = "";
         }
