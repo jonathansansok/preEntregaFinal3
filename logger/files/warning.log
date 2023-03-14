@@ -403,3 +403,11 @@
 [2023-03-09T15:05:44.632] [ERROR] WARNING - Ruta GET - "/css/style.css" no encontrada
 [2023-03-09T15:05:44.639] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
 [2023-03-09T15:05:44.850] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
+[2023-03-14T17:08:03.562] [ERROR] WARNING - Ruta GET - "/favicon.ico" no encontrada
+[2023-03-14T17:08:06.849] [ERROR] WARNING - Ruta GET - "/dashboard.js" no encontrada
+[2023-03-14T17:08:39.162] [ERROR] WARNING - Ruta GET - "/css/style.css" no encontrada
+[2023-03-14T17:08:39.176] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
+[2023-03-14T17:08:39.513] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
+[2023-03-14T17:08:42.874] [ERROR] WARNING - Ruta GET - "/assets/images/imagen" no encontrada
+[2023-03-14T17:09:08.672] [ERROR] WARNING - Ruta GET - "/chat" no encontrada
+[2023-03-14T17:09:36.290] [ERROR] WARNING - Ruta GET - "/chat" no encontrada

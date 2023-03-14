@@ -4,7 +4,11 @@ const cartSchema = mongoose.Schema(
   {
     user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     products: [
-      { type: mongoose.Schema.Types.ObjectId, ref: "Product", default: [] },
+      { 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: "Product", 
+        default: [] 
+      },
     ],
     subTotal: { type: Number, default: 0 },
   },

@@ -16,12 +16,10 @@ const chatController = {
     const id = req.params.id;
     const asunto = req.query.asunto;
     const user = await userModel.findById(id);
-    console.log(user);
     const chat = await chatModel.create({
-      user: user,
+      userOwner: user,
       asunto: asunto,
     });
-    console.log(chat);
     res.redirect(
       "/chat/" + chat.id + "?username=" + user.username + "&userId=" + id
     );

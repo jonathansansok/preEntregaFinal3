@@ -3,9 +3,17 @@ const mongoose = require("mongoose");
 
 const chatSchema = mongoose.Schema(
   {
-    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required:true },
+    userOwner: { 
+      type: mongoose.Schema.Types.ObjectId, 
+      ref: "User", 
+      required:true 
+    },
     messages: [
-      { type: mongoose.Schema.Types.ObjectId, ref: "Message", default: [] },
+      { 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: "Message", 
+        default: [] 
+      },
     ],
     asunto: { type: String },
     estaSolucionado: { type: Boolean, default: false},
