@@ -1,7 +1,7 @@
 npm run dev
 
 PATRON
-
+Modelo - Vista - Controlador - Services
 rutas- controller- services - view
 
 RUTAS DE LA APLICACION
