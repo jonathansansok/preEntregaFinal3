@@ -14,9 +14,14 @@
         <a href="/"> <h1 class="text-xl font-bold">E-commerce J. Sansó</h1> </a>
 
         <p class="font-semibold text-lg text-gray-400">
-          Bienvenida/o,
+          Bienvenida/o,  
           <span id="spanUsername" class="text-white"> <%= username %></span>
         </p>
+        
+        <p<%= user.rol === 'admin'? 'ADMINISTRADOR': '' %></p>
+        <% if(user.rol === 'admin') { %>
+          <a href="/chat/list">Administrar chats</a>
+        <%} %>
         <img
           width="50"
           height="50"

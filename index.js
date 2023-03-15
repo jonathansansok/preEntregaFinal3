@@ -24,6 +24,7 @@ let mensajes = [
 ];
 
 io.on("connection", (socket) => {
+  
   console.log("a user was connected");
   socket.on("chat message", (msg) => {
     console.log(`message: ${msg}`);
@@ -33,10 +34,9 @@ io.on("connection", (socket) => {
     console.log('mensaje archivado');
    }) 
    
-
-
     io.emit("chat message", msg);
   });
+
   socket.on("disconnect", () => {
     console.log("user was disconnected");
   });

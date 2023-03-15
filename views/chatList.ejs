@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Lista de chats</h1>
+    </header>
+    <main>
+        <ul>
+            <% chats.forEach(function(chat){ %>
+              <li>
+                  <a href="/chat/<%= chat._id %>"><strong>asunto: </strong><%= chat.asunto %></a>
+              </li>
+            <% }) %>
+            
+        </ul>
+
+    </main>
+</body>
+</html>

@@ -24,5 +24,12 @@ const chatController = {
       "/chat/" + chat.id + "?username=" + user.username + "&userId=" + id
     );
   },
+
+  list: async(req, res) => {
+    let chats = await chatModel.find();
+    // const user = await userModel.findById(chatModel.userOwner.id)
+    console.log(chats)
+    res.render('chatList', {chats})
+  }
 };
 module.exports = chatController;

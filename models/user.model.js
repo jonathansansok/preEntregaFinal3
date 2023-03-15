@@ -7,6 +7,7 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true },
     thumbnail: { type: String, default: "default.png" },
     cart: { type: mongoose.Schema.Types.ObjectId, ref: "Cart" },
+    rol: {type: String, default: "user"}
   },
 
   { timestamps: true }
