@@ -669,3 +669,13 @@
 [2023-03-15T18:58:15.229] [INFO] INFO - Ruta GET - "localhost:8080" accedida
 [2023-03-15T18:58:15.251] [INFO] INFO - Ruta GET - "localhost:8080" accedida
 [2023-03-15T18:58:17.183] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-03-16T13:40:14.228] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-03-16T13:40:17.014] [INFO] INFO - Ruta GET - "localhost:8080" accedida
+[2023-03-16T13:40:21.067] [INFO] INFO - Ruta GET - "localhost:8080/products" accedida
+[2023-03-16T13:40:21.101] [INFO] INFO - Ruta GET - "localhost:8080/products" accedida
+[2023-03-16T13:40:45.038] [INFO] INFO - Ruta POST - "localhost:8080/products" accedida
+[2023-03-16T13:41:38.441] [INFO] INFO - Ruta POST - "localhost:8080/products" accedida
+[2023-03-16T13:41:38.498] [INFO] INFO - Ruta GET - "localhost:8080/products" accedida
+[2023-03-16T13:42:30.139] [INFO] INFO - Ruta GET - "localhost:8080/products" accedida
+[2023-03-16T13:42:39.701] [INFO] INFO - Ruta GET - "localhost:8080/products" accedida
+[2023-03-16T13:42:50.196] [INFO] INFO - Ruta GET - "localhost:8080/products" accedida
