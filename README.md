@@ -1,6 +1,6 @@
 [[[Profe: Rama main
 - Archivo .env:
-https://drive.google.com/file/d/1wNJbKrGaX1rpVDNS49s-XIMSIaU2M67V/view?usp=sharing
+por privado
 - Si bien no era necesario el front. Hay varias cosas hechas con ello a travez de la carpeta Views,
 el resto por thunderClient. 
 - En archivo Readme hay mas data.]]]
