@@ -1,12 +1,12 @@
-[[[Profe: Rama main
+PROFE: Rama main
 - Archivo .env:
 por privado
 - Si bien no era necesario el front. Hay varias cosas hechas con ello a travez de la carpeta Views,
 el resto por thunderClient. 
-- En archivo Readme hay mas data.]]]
+- En archivo Readme hay mas data.---
 
-
-----npm run dev
+Reclutadores:
+npm run dev
 
 PATRON
 Modelo - Vista - Controlador - Services
